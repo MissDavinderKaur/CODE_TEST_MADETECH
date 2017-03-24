@@ -1,0 +1,10 @@
+<h1>In the blog index page</h1>
+<% blogs.forEach(blog => { %>
+  <p> blog.fullName </p>
+  <p> blog.screenName </p>
+  <p> blog.blogText </p>
+  <form action="/blog/<%= blog._id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button> Delete Task </button>
+</form>
+<% }) %>
