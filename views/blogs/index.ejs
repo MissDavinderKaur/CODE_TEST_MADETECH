@@ -1,7 +1,23 @@
+<h1>New Blog</h1>
+<form action="/blogs" method="post">
+
+  <label for="fullName">Full Name</label>
+  <input type="text" class="form-control" id="fullName" name="blog[fullName]" required>
+
+  <label for="screenName">Screen Name</label>
+  <input type="text" class="form-control" id="screenName" name="blog[screenName]" required>
+
+  <textarea id="blogText" name="blog[blogText]" required> </textarea>
+  <br>
+  <input type="submit" value="Post">
+</form>
+
 <% blogs.forEach(blog => { %>
   <p> <%= blog.fullName %> </p>
   <p> <%= blog.screenName %> </p>
   <p> <%= blog.blogText %> </p>
+  <p> <%= blog.createdAt %> </p>
+
   <form action="/blog/<%= blog._id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button> Delete Task </button>
