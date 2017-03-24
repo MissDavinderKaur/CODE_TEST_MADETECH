@@ -1,0 +1,19 @@
+{
+  "name": "bloggingservice",
+  "version": "1.0.0",
+  "description": "Code Test for MadeTech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MissDavinderKaur/CODE_TEST_MADETECH.git"
+  },
+  "author": "Davinder Kaur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MissDavinderKaur/CODE_TEST_MADETECH/issues"
+  },
+  "homepage": "https://github.com/MissDavinderKaur/CODE_TEST_MADETECH#readme"
+}
