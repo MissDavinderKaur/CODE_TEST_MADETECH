@@ -40,7 +40,11 @@ function start(){
         console.log(data);
       });
     } else {
-      $('#problem-blogs-bar').show().delay(800).slideUp(500);
+      if (text.length === 0) {
+        $('#problemS-blogs-bar').show().delay(800).slideUp(500);
+      } else {
+        $('#problemL-blogs-bar').show().delay(800).slideUp(500);
+      }
     }
   });
 

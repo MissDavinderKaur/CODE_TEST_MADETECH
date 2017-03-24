@@ -116,7 +116,7 @@ input[type="submit"] {
   min-height: 80px;
 }
 
-#new-blogs-bar, #problem-blogs-bar {
+#new-blogs-bar, #problemL-blogs-bar, #problemS-blogs-bar {
   color: #47A1D3;
   font-size: 13px;
   display: block;
@@ -133,7 +133,7 @@ input[type="submit"] {
   display: none;
 }
 
-#new-blogs-bar:hover, #problem-blogs-bar:hover {
+#new-blogs-bar:hover, #problemL-blogs-bar:hover, #problemS-blogs-bar:hover {
   background: #e1e8ed;
 }
 
