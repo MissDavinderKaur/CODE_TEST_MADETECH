@@ -2,6 +2,8 @@ $(start);
 
 function start(){
 
+  $('body').on('click', '.deleteButton', deleteBlog);
+
   $('#new-blog-input').on('keyup', function(){
     $('.blog-counter').html(150 - $('textarea').val().length);
     if ($('textarea').val().length > 150){
@@ -22,31 +24,36 @@ function start(){
         data: $(this).serialize()
       })
       .done(resp => {
-        $('#new-blogs-bar').show().delay(800).slideUp(500);
+        $('#status-blogs-bar').html('One new blog').show().delay(2000).slideUp(2000);
         var $ol = $('.stream-items');
-        var blogToAdd = '<li class="stream-item"><div class="blog"><a href="#"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."></a><div class="content"><strong class="fullname">' + resp.blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + resp.blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + resp.blog.createdAt + '</small><p>' + resp.blog.blogText +   '<form action="/blogs/<%= blog._id %>" method="post"> <input type="hidden" name="_method" value="delete">         <button class="deleteButton"> Delete </button> </form></p></div></div></li>';
+        var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + resp.blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + resp.blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + resp.blog.createdAt + '</small><p>' + resp.blog.blogText + '<button class="deleteButton" data-id="' + resp.blog._id + '"> Delete </button></p></div></div></li>';
         $ol.prepend(blogToAdd);
-
 
         // Reset the form
         $('#fullName').val('');
         $('#screenName').val('');
         $('textarea').val('');
         $('.blog-counter').html(140 - $('textarea').val().length);
-
       })
       .fail(data => {
-        console.log('inside the FAIL');
-        console.log(data);
       });
     } else {
       if (text.length === 0) {
-        $('#problemS-blogs-bar').show().delay(800).slideUp(500);
+        $('#status-blogs-bar').html('Blog is too short!').show().delay(2000).slideUp(2000);
       } else {
-        $('#problemL-blogs-bar').show().delay(800).slideUp(500);
+        $('#status-blogs-bar').html('Blog is too long').show().delay(2000).slideUp(2000);
       }
     }
   });
 
+  function deleteBlog(e){
+    e.preventDefault();
+    $.ajax({
+      url: `http://localhost:3000/blogs/${$(this).data('id')}`,
+      type: 'delete'
+    }).done(() => {
+      $('#status-blogs-bar').html('Blog successfully deleted').show().delay(2000).slideUp(2000);
+    });
+  }
 
 }

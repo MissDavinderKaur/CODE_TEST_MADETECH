@@ -33,14 +33,7 @@
       </div>
     </div>
     <div class="stream-container">
-      <div id="new-blogs-bar">
-        View <span>1</span> new blog
-      </div>
-      <div id="problemS-blogs-bar">
-        Blog is too short!
-      </div>
-      <div id="problemL-blogs-bar">
-        Blog is too long!
+      <div id="status-blogs-bar">
       </div>
       <div class="stream">
         <ol class="stream-items">
@@ -54,10 +47,7 @@
             &nbsp;&middot;&nbsp;
             <small class="time"> <%= blog.createdAt %></small>
             <p> <%= blog.blogText %>
-            <form action="/blogs/<%= blog._id %>" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <button class="deleteButton"> Delete </button>
-            </form></p>
+            <button class="deleteButton" data-id="<%= blog._id %> "> Delete </button></p>
             </div>
             </div>
             </li>

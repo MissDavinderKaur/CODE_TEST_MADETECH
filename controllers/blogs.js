@@ -17,10 +17,9 @@ function blogsCreate(req, res) {
 }
 
 function blogsDelete(req, res) {
-  Blog.findById((req.params.id), (err, blog) => {
+  Blog.findByIdAndRemove((req.params.id), (err, blog) => {
     if (err) return console.log(err);
-    blog.remove();
-    return res.redirect('/blogs');
+    return res.sendStatus(200);
   });
 }
 
