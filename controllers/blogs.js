@@ -27,8 +27,6 @@ function blogsDelete(req, res) {
   });
 }
 
-
-
 module.exports = {
   index: blogsIndex,
   // new: blogsNew,

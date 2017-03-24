@@ -4,6 +4,7 @@ const express         = require('express');
 const methodOverride  = require('method-override');
 const mongoose        = require('mongoose');
 const morgan          = require('morgan');
+const router          = require('./config/routes');
 
 const app             = express();
 const port            = process.env.PORT || 3000;
@@ -27,6 +28,8 @@ app.use(methodOverride(req => {
   }
 }));
 app.use(ejsLayouts);
+
+app.use('/', router);
 
 app.listen(port, () => {
   console.log(`Application has started on port: ${port}`);
