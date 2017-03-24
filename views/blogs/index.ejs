@@ -18,7 +18,7 @@
   <p> <%= blog.blogText %> </p>
   <p> <%= blog.createdAt %> </p>
 
-  <form action="/blog/<%= blog._id %>" method="post">
+  <form action="/blogs/<%= blog._id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button> Delete Task </button>
 </form>
