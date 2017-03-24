@@ -24,7 +24,7 @@
           <label for="screenName">Screen Name</label>
           <input type="text" class="form-control" id="screenName" name="blog[screenName]" required>
 
-          <textarea id="new-blog-input" name="blog[blogText]" required></textarea>
+          <textarea id="new-blog-input" name="blog[blogText]"></textarea>
           <div class="actions">
             <input type="submit" value="Post">
             <span class="blog-counter">150</span>
@@ -34,7 +34,10 @@
     </div>
     <div class="stream-container">
       <div id="new-blogs-bar">
-        View <span>1</span> new Tweets
+        View <span>1</span> new blog
+      </div>
+      <div id="problem-blogs-bar">
+        Blog is too short!
       </div>
       <div class="stream">
         <ol class="stream-items">

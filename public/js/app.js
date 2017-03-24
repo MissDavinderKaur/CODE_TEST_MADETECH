@@ -22,7 +22,7 @@ function start(){
         data: $(this).serialize()
       })
       .done(resp => {
-        $('#new-blogs-bar').show().delay(500).slideUp(500);
+        $('#new-blogs-bar').show().delay(800).slideUp(500);
         var $ol = $('.stream-items');
         var blogToAdd = '<li class="stream-item"><div class="blog"><a href="#"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."></a><div class="content"><strong class="fullname">' + resp.blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + resp.blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + resp.blog.createdAt + '</small><p>' + resp.blog.blogText +   '<form action="/blogs/<%= blog._id %>" method="post"> <input type="hidden" name="_method" value="delete">         <button class="deleteButton"> Delete </button> </form></p></div></div></li>';
         $ol.prepend(blogToAdd);
@@ -39,6 +39,8 @@ function start(){
         console.log('inside the FAIL');
         console.log(data);
       });
+    } else {
+      $('#problem-blogs-bar').show().delay(800).slideUp(500);
     }
   });
 
