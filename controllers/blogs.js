@@ -20,12 +20,7 @@ function blogsDelete(req, res) {
   Blog.findById((req.params.id), (err, blog) => {
     if (err) return console.log(err);
     blog.remove();
-
-    Blog.find({}, (err, blogs) => {
-      if (err) return console.log(err);
-      blogs.reverse();
-      return res.render('blogs', { blogs });
-    });
+    return res.redirect('/blogs');
   });
 }
 
