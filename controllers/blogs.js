@@ -12,7 +12,7 @@ function blogsCreate(req, res) {
   const blog = new Blog(req.body.blog);
   blog.save((err, blog) => {
     if (err) return console.log(err);
-    return res.redirect('blogs');
+    return res.send( { blog } );
   });
 }
 
