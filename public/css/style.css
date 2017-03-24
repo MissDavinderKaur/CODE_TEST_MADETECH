@@ -39,25 +39,25 @@ header {
   width: 590px;
 }
 
-.timeline-tweet-box {
+.timeline-blog-box {
   border-radius: 3px 3px 0 0;
   border: 1px solid #D1E7F4;
   background: #ECF5FA;
   padding: 10px;
 }
 
-.home-tweet-box {
+.home-blog-box {
   min-height: 30px;
   line-height: 30px;
 }
 
-.home-tweet-box img {
+.home-blog-box img {
   width: 32px;
   height: 30px;
   margin-right: 10px;
 }
 
-.home-tweet-box img {
+.home-blog-box img {
   float: left;
 }
 
@@ -80,7 +80,7 @@ textarea {
   padding: 10px 0 0;
 }
 
-.tweet-counter {
+.blog-counter {
   color: #8899a6;
   float: right;
   margin: 0 10px;
@@ -116,7 +116,7 @@ input[type="submit"] {
   min-height: 80px;
 }
 
-#new-tweets-bar {
+#new-blogs-bar {
   color: #47A1D3;
   font-size: 13px;
   display: block;
@@ -133,7 +133,7 @@ input[type="submit"] {
   display: none;
 }
 
-#new-tweets-bar:hover {
+#new-blogs-bar:hover {
   background: #e1e8ed;
 }
 
@@ -150,7 +150,7 @@ ol.stream-items {
   list-style-type: none;
 }
 
-.tweet {
+.blog {
   border-bottom: 1px solid #e1e8ed;
   cursor: pointer;
   font-size: 14px;
@@ -159,18 +159,18 @@ ol.stream-items {
   overflow: hidden;
 }
 
-.tweet .content {
+.blog .content {
   float: right;
   width: 510px;
   word-wrap: break-word;
 }
 
-.tweet > a {
+.blog > a {
   font-size: 13px;
   color: #8899a6;
 }
 
-.tweet p {
+.blog p {
   color: #292f33;
   font-size: 14px;
   line-height: 18px;
@@ -178,14 +178,14 @@ ol.stream-items {
   margin: 0;
 }
 
-.tweet img {
+.blog img {
   height: 48px;
   width: 48px;
   float: left;
   margin-right: 10px;
 }
 
-.tweet .fullname {
+.blog .fullname {
   font-weight: bold;
   color: #292f33;
   font-size: 14px;

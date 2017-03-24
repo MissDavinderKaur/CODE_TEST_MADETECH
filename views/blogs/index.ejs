@@ -14,9 +14,9 @@
     </nav>
   </header>
   <div id="timeline">
-    <div class="timeline-tweet-box">
-      <div class="home-tweet-box">
-        <form id="new-tweet-form" action="/blogs" method="post">
+    <div class="timeline-blog-box">
+      <div class="home-blog-box">
+        <form id="new-blog-form" action="/blogs" method="post">
           <img id="thumbnail" src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here.">
           <label for="fullName">Full Name</label>
           <input type="text" class="form-control" id="fullName" name="blog[fullName]" required>
@@ -24,23 +24,23 @@
           <label for="screenName">Screen Name</label>
           <input type="text" class="form-control" id="screenName" name="blog[screenName]" required>
 
-          <textarea id="new-tweet-input" name="blog[blogText]" required></textarea>
+          <textarea id="new-blog-input" name="blog[blogText]" required></textarea>
           <div class="actions">
             <input type="submit" value="Post">
-            <span class="tweet-counter">150</span>
+            <span class="blog-counter">150</span>
           </div>
         </form>
       </div>
     </div>
     <div class="stream-container">
-      <div id="new-tweets-bar">
+      <div id="new-blogs-bar">
         View <span>1</span> new Tweets
       </div>
       <div class="stream">
         <ol class="stream-items">
           <% blogs.forEach(blog => { %>
             <li class="stream-item">
-            <div class="tweet">
+            <div class="blog">
             <img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here.">
             <div class="content">
             <strong class="fullname"> <%= blog.fullName %> </strong>
