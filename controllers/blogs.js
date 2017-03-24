@@ -2,6 +2,7 @@ const Blog = require('../models/blog');
 
 function blogsIndex(req, res) {
   Blog.find({}, (err, blogs) => {
+    blogs.reverse();
     if (err) return console.log(err);
     return res.render('blogs', { blogs });
   });
@@ -22,6 +23,7 @@ function blogsDelete(req, res) {
 
     Blog.find({}, (err, blogs) => {
       if (err) return console.log(err);
+      blogs.reverse();
       return res.render('blogs', { blogs });
     });
   });
