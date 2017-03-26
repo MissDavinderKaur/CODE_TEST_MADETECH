@@ -1,4 +1,4 @@
-const mongoose   = require('mongoose');
+const mongoose = require('mongoose');
 const databaseURL = process.env.MONGODB_URI || 'mongodb://localhost/bloggingservice';
 mongoose.connect(databaseURL);
 

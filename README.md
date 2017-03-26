@@ -6,6 +6,9 @@ The objective of this code test is to build a basic blogging service. A user sho
 
 ##How it works
 Run ```npm i```
-Run ```node db/seed```
+Run ```node app/db/seed```
 Ensure ```mongod``` and ```nodemon``` are running
 The app runs in the browser on localhost:3000
+
+## How to run the tests
+Run ```npm test```

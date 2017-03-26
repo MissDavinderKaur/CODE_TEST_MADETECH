@@ -1,13 +1,14 @@
 const router = require('express').Router();
 
-const blogs = require('../controllers/blogs');
+const blog = require('../controllers/blogs');
 
 router.route('/').get((req, res) => res.render('home'));
 
 router.route('/blogs')
-.get(blogs.index)
-.post(blogs.create);
+  .get(blog.getAllBlogs)
+  .post(blog.createBlog);
+
 router.route('/blogs/:id')
-.delete(blogs.delete);
+  .delete(blog.deleteBlog);
 
 module.exports = router;

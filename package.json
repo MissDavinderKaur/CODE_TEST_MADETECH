@@ -2,9 +2,10 @@
   "name": "bloggingservice",
   "version": "1.0.0",
   "description": "Code Test for MadeTech",
-  "main": "index.js",
+  "main": "app/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage",
+    "lint": "eslint ./app"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,15 @@
     "mongoose": "^4.9.1",
     "morgan": "^1.8.1",
     "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-plugin-jest": "^19.0.1",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.10.3",
+    "jest-cli": "^17.0.0"
   }
 }
