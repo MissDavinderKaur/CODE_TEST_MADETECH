@@ -22,7 +22,7 @@ module.exports = {
     .assert.visible('#screenName')
     .setValue('#screenName', 'DK')
     .assert.visible('#new-blog-input')
-    .setValue('#new-blog-input', 'Some new blog text here')
+    .setValue('#new-blog-input', 'Blog of perfect length')
     .waitForElementVisible('#postBlog', 1000)
     .click('#postBlog')
     .pause(1000)
@@ -70,7 +70,7 @@ module.exports = {
     .waitForElementVisible('body', 1000)
     .assert.visible('#fullName')
     .assert.visible('.stream-items')
-    .click('#postBlog')
+    .click('#1')
     .assert.containsText('#status-blogs-bar', 'Blog successfully deleted')
     .end();
   },

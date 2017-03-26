@@ -2,17 +2,22 @@ const $ = window.$;
 
 function start(){
 
+  //Run the blogsIndex function to populate the page
   blogsIndex();
 
+  //Add the event listener to the Delete buttons
   $('body').on('click', '.deleteButton', deleteBlog);
 
+  //The blogsIndex function fetches the blogs from the back-end and adds them to the page.
   function blogsIndex(e){
     if (e) e.preventDefault();
 
+    $('ol').remove();
+    $('.stream').append('<ol class="stream-items"></ol>');
     $.get('http://localhost:3000/blogs')
     .done(data => {
       $.each(data, (index, blog) => {
-        var blogToAdd = '<li class="stream-item" id="' + index + '"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
+        var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
         $('.stream-items').prepend(blogToAdd);
       });
     });
@@ -53,8 +58,11 @@ function start(){
       }
     })
     .done((resp) => {
-      $('#status-blogs-bar').html('One new blog').show().delay(2000).slideUp(2000);
-      
+      $('#status-blogs-bar')
+      .html('One new blog')
+      .show()
+      .delay(2000)
+      .slideUp(2000);
       blogsIndex();
 
       // Reset the form
@@ -64,21 +72,21 @@ function start(){
       $('.blog-counter').html(140 - $('textarea').val().length);
     });
   });
-}
 
-function deleteBlog(e) {
-  e.preventDefault();
-  $.ajax({
-    url: `http://localhost:3000/blogs/${$(this).data('id')}`,
-    type: 'delete'
-  }).done(() => {
-    blogsIndex();
-    $('#status-blogs-bar')
-    .html('Blog successfully deleted')
-    .show()
-    .delay(2000)
-    .slideUp(2000);
-  });
+  function deleteBlog(e) {
+    e.preventDefault();
+    $.ajax({
+      url: `http://localhost:3000/blogs/${$(this).data('id')}`,
+      type: 'delete'
+    }).done(() => {
+      blogsIndex();
+      $('#status-blogs-bar')
+      .html('Blog successfully deleted')
+      .show()
+      .delay(2000)
+      .slideUp(2000);
+    });
+  }
 }
 
 
