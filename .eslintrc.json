@@ -5,6 +5,6 @@
     "jest/globals": true
   },
   "globals": {
-    "$": false,
+    "$": false
   }
 }

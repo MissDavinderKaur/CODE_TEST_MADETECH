@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const mongoose = require('mongoose');
 
 const databaseURL = process.env.MONGODB_URI || 'mongodb://localhost/bloggingservice';
@@ -56,3 +57,5 @@ blog5.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog5.fullName} was saved`);
 });
+
+ /* eslint-enable no-console */
