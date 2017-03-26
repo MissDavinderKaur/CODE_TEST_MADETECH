@@ -12,7 +12,7 @@ function start(){
     $.get('http://localhost:3000/blogs')
     .done(data => {
       $.each(data, (index, blog) => {
-        var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
+        var blogToAdd = '<li class="stream-item" id="' + index + '"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
         $('.stream-items').prepend(blogToAdd);
       });
     });
@@ -46,7 +46,7 @@ function start(){
         .slideUp(2000);
       } else {
         $('#status-blogs-bar')
-        .html('Blog is too long')
+        .html('Blog is too long!')
         .show()
         .delay(2000)
         .slideUp(2000);
@@ -54,8 +54,8 @@ function start(){
     })
     .done((resp) => {
       $('#status-blogs-bar').html('One new blog').show().delay(2000).slideUp(2000);
-      var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + resp.blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + resp.blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(resp.blog.createdAt) + '</small><p>' + resp.blog.blogText + '<button class="deleteButton" data-id="' + resp.blog._id + '"> Delete </button></p></div></div></li>';
-      $('.stream-items').prepend(blogToAdd);
+      
+      blogsIndex();
 
       // Reset the form
       $('#fullName').val('');

@@ -1,0 +1,180 @@
+16:39:31.389 INFO - Selenium build info: version: '3.3.1', revision: '5234b32'
+16:39:31.389 INFO - Launching a standalone Selenium Server
+2017-03-26 16:39:31.418:INFO::main: Logging initialized @312ms to org.seleniumhq.jetty9.util.log.StdErrLog
+16:39:31.487 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+ registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+16:39:31.487 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+16:39:31.487 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+16:39:31.487 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+16:39:31.488 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+16:39:31.488 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+2017-03-26 16:39:31.543:INFO:osjs.Server:main: jetty-9.2.20.v20161216
+2017-03-26 16:39:31.599:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@685cb137{/,null,AVAILABLE}
+2017-03-26 16:39:31.634:INFO:osjs.AbstractConnector:main: Started ServerConnector@5bcab519{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2017-03-26 16:39:31.635:INFO:osjs.Server:main: Started @529ms
+16:39:31.635 INFO - Selenium Server is up and running
+16:39:31.911 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+16:39:31.943 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+16:39:31.960 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455517 (2c6d2707d8ea850c862f04ac066724273981e88f) on port 46307
+Only local connections are allowed.
+16:39:33.365 INFO - Detected dialect: OSS
+16:39:33.405 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+16:39:33.433 INFO - Executing: [get: http://localhost:3000/])
+16:39:34.134 INFO - Done: [get: http://localhost:3000/]
+16:39:34.147 INFO - Executing: [find elements: By.cssSelector: body])
+16:39:34.204 INFO - Done: [find elements: By.cssSelector: body]
+16:39:34.214 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: body]])
+16:39:34.248 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: body]]
+16:39:34.258 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:34.285 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:34.290 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #fullName]])
+16:39:34.314 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #fullName]]
+16:39:34.324 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:34.336 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:34.341 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]])
+16:39:34.472 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]]
+16:39:34.477 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:34.501 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:34.504 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #screenName]])
+16:39:34.526 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #screenName]]
+16:39:34.530 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:34.540 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:34.545 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #screenName], [D, K]])
+16:39:34.609 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #screenName], [D, K]]
+16:39:34.616 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:34.641 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:34.645 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #new-blog-input]])
+16:39:34.667 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #new-blog-input]]
+16:39:34.671 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:34.681 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:34.686 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #new-blog-input], [S, o, m, e,  , n, e, w,  , b, l, o, g,  , t, e, x, t,  , h, e, r, e]])
+16:39:34.843 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #new-blog-input], [S, o, m, e,  , n, e, w,  , b, l, o, g,  , t, e, x, t,  , h, e, r, e]]
+16:39:34.854 INFO - Executing: [find elements: By.cssSelector: #postBlog])
+16:39:34.876 INFO - Done: [find elements: By.cssSelector: #postBlog]
+16:39:34.880 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #postBlog]])
+16:39:34.902 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #postBlog]]
+16:39:34.906 INFO - Executing: [find element: By.cssSelector: #postBlog])
+16:39:34.927 INFO - Done: [find element: By.cssSelector: #postBlog]
+16:39:34.931 INFO - Executing: [click: 4 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #postBlog]])
+16:39:35.001 INFO - Done: [click: 4 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #postBlog]]
+16:39:36.014 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:36.046 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:36.052 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #status-blogs-bar]])
+16:39:36.073 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #status-blogs-bar]]
+16:39:36.079 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:36.089 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:36.094 INFO - Executing: [get text: 5 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #status-blogs-bar]])
+16:39:36.119 INFO - Done: [get text: 5 [[ChromeDriver: chrome on MAC (527c07f768bc571a5223f824888e62e8)] -> css selector: #status-blogs-bar]]
+16:39:36.126 INFO - Executing: [delete session: b221d39c-5228-4363-bec4-97813b37cb7c])
+16:39:36.204 INFO - Done: [delete session: b221d39c-5228-4363-bec4-97813b37cb7c]
+16:39:36.215 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+16:39:36.216 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455517 (2c6d2707d8ea850c862f04ac066724273981e88f) on port 22974
+Only local connections are allowed.
+16:39:37.145 INFO - Detected dialect: OSS
+16:39:37.150 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+16:39:37.162 INFO - Executing: [get: http://localhost:3000/])
+16:39:37.813 INFO - Done: [get: http://localhost:3000/]
+16:39:37.819 INFO - Executing: [find elements: By.cssSelector: body])
+16:39:37.861 INFO - Done: [find elements: By.cssSelector: body]
+16:39:37.867 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: body]])
+16:39:37.908 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: body]]
+16:39:37.915 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:37.941 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:37.945 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #fullName]])
+16:39:37.973 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #fullName]]
+16:39:37.978 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:37.988 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:37.996 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]])
+16:39:38.126 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]]
+16:39:38.131 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:38.155 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:38.159 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #screenName]])
+16:39:38.181 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #screenName]]
+16:39:38.185 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:38.196 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:38.200 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #screenName], [D, K]])
+16:39:38.263 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #screenName], [D, K]]
+16:39:38.269 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:38.293 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:38.296 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #new-blog-input]])
+16:39:38.319 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #new-blog-input]]
+16:39:38.324 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:38.333 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:38.337 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #new-blog-input], []])
+16:39:38.388 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #new-blog-input], []]
+16:39:38.393 INFO - Executing: [find elements: By.cssSelector: #postBlog])
+16:39:38.416 INFO - Done: [find elements: By.cssSelector: #postBlog]
+16:39:38.420 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #postBlog]])
+16:39:38.440 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #postBlog]]
+16:39:38.445 INFO - Executing: [find element: By.cssSelector: #postBlog])
+16:39:38.466 INFO - Done: [find element: By.cssSelector: #postBlog]
+16:39:38.472 INFO - Executing: [click: 4 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #postBlog]])
+16:39:38.540 INFO - Done: [click: 4 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #postBlog]]
+16:39:39.554 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:39.579 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:39.582 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #status-blogs-bar]])
+16:39:39.602 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #status-blogs-bar]]
+16:39:39.608 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:39.617 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:39.621 INFO - Executing: [get text: 5 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #status-blogs-bar]])
+16:39:39.647 INFO - Done: [get text: 5 [[ChromeDriver: chrome on MAC (bc868c4a1655340fddcebe07d18e9907)] -> css selector: #status-blogs-bar]]
+16:39:39.652 INFO - Executing: [delete session: 9081151b-b037-4d57-b1a1-9527fe732b8a])
+16:39:39.726 INFO - Done: [delete session: 9081151b-b037-4d57-b1a1-9527fe732b8a]
+16:39:39.737 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+16:39:39.738 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.28.455517 (2c6d2707d8ea850c862f04ac066724273981e88f) on port 44786
+Only local connections are allowed.
+16:39:40.648 INFO - Detected dialect: OSS
+16:39:40.654 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Tests, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+16:39:40.670 INFO - Executing: [get: http://localhost:3000/])
+16:39:41.435 INFO - Done: [get: http://localhost:3000/]
+16:39:41.441 INFO - Executing: [find elements: By.cssSelector: body])
+16:39:41.473 INFO - Done: [find elements: By.cssSelector: body]
+16:39:41.477 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: body]])
+16:39:41.519 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: body]]
+16:39:41.526 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:41.556 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:41.561 INFO - Executing: [is displayed: 1 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #fullName]])
+16:39:41.585 INFO - Done: [is displayed: 1 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #fullName]]
+16:39:41.591 INFO - Executing: [find element: By.cssSelector: #fullName])
+16:39:41.601 INFO - Done: [find element: By.cssSelector: #fullName]
+16:39:41.606 INFO - Executing: [send keys: 1 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]])
+16:39:41.734 INFO - Done: [send keys: 1 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #fullName], [D, a, v, i, n, d, e, r, K, a, u, r]]
+16:39:41.742 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:41.763 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:41.768 INFO - Executing: [is displayed: 2 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #screenName]])
+16:39:41.789 INFO - Done: [is displayed: 2 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #screenName]]
+16:39:41.793 INFO - Executing: [find element: By.cssSelector: #screenName])
+16:39:41.802 INFO - Done: [find element: By.cssSelector: #screenName]
+16:39:41.806 INFO - Executing: [send keys: 2 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #screenName], [D, K]])
+16:39:41.867 INFO - Done: [send keys: 2 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #screenName], [D, K]]
+16:39:41.874 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:41.896 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:41.901 INFO - Executing: [is displayed: 3 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #new-blog-input]])
+16:39:41.921 INFO - Done: [is displayed: 3 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #new-blog-input]]
+16:39:41.925 INFO - Executing: [find element: By.cssSelector: #new-blog-input])
+16:39:41.935 INFO - Done: [find element: By.cssSelector: #new-blog-input]
+16:39:41.941 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #new-blog-input], [T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .]])
+16:39:42.712 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #new-blog-input], [T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .,  , T, h, i, s,  , w, i, l, l,  , b, e,  , t, o, o,  , l, o, n, g, .]]
+16:39:42.716 INFO - Executing: [find elements: By.cssSelector: #postBlog])
+16:39:42.740 INFO - Done: [find elements: By.cssSelector: #postBlog]
+16:39:42.744 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #postBlog]])
+16:39:42.765 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #postBlog]]
+16:39:42.769 INFO - Executing: [find element: By.cssSelector: #postBlog])
+16:39:42.790 INFO - Done: [find element: By.cssSelector: #postBlog]
+16:39:42.793 INFO - Executing: [click: 4 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #postBlog]])
+16:39:42.866 INFO - Done: [click: 4 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #postBlog]]
+16:39:43.877 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:43.901 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:43.904 INFO - Executing: [is displayed: 5 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #status-blogs-bar]])
+16:39:43.924 INFO - Done: [is displayed: 5 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #status-blogs-bar]]
+16:39:43.928 INFO - Executing: [find element: By.cssSelector: #status-blogs-bar])
+16:39:43.937 INFO - Done: [find element: By.cssSelector: #status-blogs-bar]
+16:39:43.940 INFO - Executing: [get text: 5 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #status-blogs-bar]])
+16:39:43.964 INFO - Done: [get text: 5 [[ChromeDriver: chrome on MAC (62afa7a10b579837365dd4209af57140)] -> css selector: #status-blogs-bar]]
+16:39:43.972 INFO - Executing: [delete session: 5ebae1e5-b00a-45b1-8bc3-c69762691c3c])
+16:39:44.049 INFO - Done: [delete session: 5ebae1e5-b00a-45b1-8bc3-c69762691c3c]

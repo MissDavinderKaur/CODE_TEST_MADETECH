@@ -36,7 +36,7 @@ describe('createBlog', () => {
 
   it('doesnt save if 0', () => {
     req.body.blog.blogText = '';
-    
+
     createBlog(req, res);
 
     expect(res.status).toBeCalledWith(400);
@@ -46,9 +46,7 @@ describe('createBlog', () => {
   });
 
   it('doesnt save if length > 150', () => {
-    req.body.blog.blogText = `aaagih320 th3209h320h f 03hlgn saljglsa jglskajg lkasjlkja
-    alsjflaskjglkasjglksajflkjsa lkfsjalkfjaslkfjaslk flaskn flkasnf lksanf
-    alsgkjsalkjfsalkfj aslkjflk ajsflksajdlksajd lkjsa lkdjsal kdjsalk jdaslkjd`;
+    req.body.blog.blogText = `This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long.`;
 
     createBlog(req, res);
 

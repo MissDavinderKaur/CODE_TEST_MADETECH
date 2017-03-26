@@ -12,3 +12,4 @@ The app runs in the browser on localhost:3000
 
 ## How to run the tests
 Run ```npm test```
+Run ```npm run test-e2e
