@@ -1,7 +1,10 @@
 {
-    "extends": "airbnb",
-    "plugins": [ "jest" ],
-    "env": {
-      "jest/globals": true
-    }
+  "extends": "airbnb",
+  "plugins": [ "jest" ],
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "$": false,
+  }
 }

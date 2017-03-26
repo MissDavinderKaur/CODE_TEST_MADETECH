@@ -12,7 +12,7 @@ const blog1 = new Blog({
   screenName: 'MissDK',
   blogText: 'Something Interesting here',
 });
-blog1.save((err, blog) => {
+blog1.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog1.fullName} was saved`);
 });
@@ -22,7 +22,7 @@ const blog2 = new Blog({
   screenName: 'MissDK2',
   blogText: 'Something Interesting here2',
 });
-blog2.save((err, blog) => {
+blog2.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog2.fullName} was saved`);
 });
@@ -32,7 +32,7 @@ const blog3 = new Blog({
   screenName: 'MissDK3',
   blogText: 'Something Interesting here3',
 });
-blog3.save((err, blog) => {
+blog3.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog3.fullName} was saved`);
 });
@@ -42,7 +42,7 @@ const blog4 = new Blog({
   screenName: 'MissDK4',
   blogText: 'Something Interesting here4',
 });
-blog4.save((err, blog) => {
+blog4.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog4.fullName} was saved`);
 });
@@ -52,7 +52,7 @@ const blog5 = new Blog({
   screenName: 'MissDK5',
   blogText: 'Something Interesting here5',
 });
-blog5.save((err, blog) => {
+blog5.save((err) => {
   if (err) return console.log(err);
   console.log(`${blog5.fullName} was saved`);
 });

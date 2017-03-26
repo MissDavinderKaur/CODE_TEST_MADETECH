@@ -12,19 +12,18 @@ const { createBlog } = require('../blogs');
 
 describe('createBlog', () => {
   let req;
-  let send;
+  const send = jest.fn();
   let res;
-  let json = jest.fn();
+  const json = jest.fn();
 
   beforeEach(() => {
+    send.mockClear();
+    json.mockClear();
     req = {
       body: {
         blog: {},
       },
     };
-
-    send = jest.fn();
-    json.mockClear();
     res = {
       status: jest.fn().mockReturnValue({
         send,
@@ -46,7 +45,7 @@ describe('createBlog', () => {
   });
 
   it('doesnt save if length > 150', () => {
-    req.body.blog.blogText = `This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long.`;
+    req.body.blog.blogText = 'This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long. This will be too long.';
 
     createBlog(req, res);
 

@@ -11,9 +11,9 @@ function start() {
     $('ol').remove();
     $('.stream').append('<ol class="stream-items"></ol>');
     $.get('http://localhost:3000/blogs')
-    .done(data => {
+    .done((data) => {
       $.each(data, (index, blog) => {
-        var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" name="' + index + '" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
+        const blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" name="' + index + '" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
         $('.stream-items').prepend(blogToAdd);
       });
     });
