@@ -1,17 +1,13 @@
 const $ = window.$;
 
-function start(){
-
-  //Run the blogsIndex function to populate the page
+function start() {
+  // Run the blogsIndex function to populate the page
   blogsIndex();
-
-  //Add the event listener to the Delete buttons
+  // Add the event listener to the Delete buttons
   $('body').on('click', '.deleteButton', deleteBlog);
-
-  //The blogsIndex function fetches the blogs from the back-end and adds them to the page.
+  // The blogsIndex function fetches the blogs from the back-end and adds them to the page.
   function blogsIndex(e){
     if (e) e.preventDefault();
-
     $('ol').remove();
     $('.stream').append('<ol class="stream-items"></ol>');
     $.get('http://localhost:3000/blogs')
@@ -23,24 +19,24 @@ function start(){
     });
   }
 
-  $('#new-blog-input').on('keyup', function(){
+  // Event listener for the blog character counter
+  $('#new-blog-input').on('keyup', function() {
     $('.blog-counter').html(150 - $('textarea').val().length);
-    if ($('textarea').val().length > 150){
+    if ($('textarea').val().length > 150) {
       $('.blog-counter').css('color', '#cc8787');
     } else {
       $('.blog-counter').css('color', '#8899a6');
     }
   });
 
-  $('#new-blog-form').on('submit', function(e){
+  // Event Listener for the submit of the new blog
+  $('#new-blog-form').on('submit', function (e) {
     e.preventDefault();
-
-    var text = $('textarea').val();
-
+    const text = $('textarea').val();
     return $.ajax({
       url: 'http://localhost:3000/blogs',
       method: 'POST',
-      data: $(this).serialize()
+      data: $(this).serialize(),
     })
     .fail((resp) => {
       if (text.length === 0) {
@@ -64,7 +60,6 @@ function start(){
       .delay(2000)
       .slideUp(2000);
       blogsIndex();
-
       // Reset the form
       $('#fullName').val('');
       $('#screenName').val('');
@@ -73,11 +68,12 @@ function start(){
     });
   });
 
+  // Function called when the delete button is pressed
   function deleteBlog(e) {
     e.preventDefault();
     $.ajax({
       url: `http://localhost:3000/blogs/${$(this).data('id')}`,
-      type: 'delete'
+      type: 'delete',
     }).done(() => {
       blogsIndex();
       $('#status-blogs-bar')
