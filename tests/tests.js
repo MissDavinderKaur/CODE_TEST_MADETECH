@@ -1,18 +1,4 @@
 module.exports = {
-  // 'Demo test Google' : function (client) {
-  //   client
-  //     .url('http://www.google.com')
-  //     .waitForElementVisible('body', 1000)
-  //     .assert.title('Google')
-  //     .assert.visible('input[type=text]')
-  //     .setValue('input[type=text]', 'rembrandt van rijn')
-  //     .waitForElementVisible('button[name=btnG]', 1000)
-  //     .click('button[name=btnG]')
-  //     .pause(1000)
-  //     .assert.containsText('ol#rso li:first-child',
-  //       'Rembrandt - Wikipedia')
-  //     .end()
-  // }
   'Successfully submitted a blog' : function (client) {
     client
     .url('http://localhost:3000/')
@@ -62,16 +48,6 @@ module.exports = {
     .pause(1000)
     .assert.visible('#status-blogs-bar')
     .assert.containsText('#status-blogs-bar', 'Blog is too long!')
-    .end();
-  },
-  'Delete a blog' : function (client) {
-    client
-    .url('http://localhost:3000/')
-    .waitForElementVisible('body', 1000)
-    .assert.visible('#fullName')
-    .assert.visible('.stream-items')
-    .click('#1')
-    .assert.containsText('#status-blogs-bar', 'Blog successfully deleted')
     .end();
   },
 };
