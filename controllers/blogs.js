@@ -1,10 +1,9 @@
 const Blog = require('../models/blog');
 
-function blogsIndex(req, res) {
+function blogsIndex(req, res){
   Blog.find({}, (err, blogs) => {
-    blogs.reverse();
-    if (err) return console.log(err);
-    return res.render('blogs', { blogs });
+    if (err) return res.status(500).json(err);
+    return res.status(200).json(blogs);
   });
 }
 

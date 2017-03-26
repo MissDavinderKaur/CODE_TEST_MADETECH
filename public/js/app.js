@@ -2,7 +2,22 @@ $(start);
 
 function start(){
 
+  blogsIndex();
+
   $('body').on('click', '.deleteButton', deleteBlog);
+
+  function blogsIndex(e){
+    if (e) e.preventDefault();
+
+    $.get('http://localhost:3000/blogs')
+    .done(data => {
+      console.log('DATA FROM THE GET CALL IN INDEX', data);
+      $.each(data, (index, blog) => {
+        var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(blog.createdAt) + '</small><p>' + blog.blogText + '<button class="deleteButton" data-id="' + blog._id + '"> Delete </button></p></div></div></li>';
+        $('.stream-items').prepend(blogToAdd);
+      });
+    });
+  }
 
   $('#new-blog-input').on('keyup', function(){
     $('.blog-counter').html(150 - $('textarea').val().length);
@@ -13,8 +28,7 @@ function start(){
     }
   });
 
-  var $blogForm = $('#new-blog-form');
-  $blogForm.on('submit', function(e){
+  $('#new-blog-form').on('submit', function(e){
     e.preventDefault();
     var text = $('textarea').val();
     if (text.length > 0 && text.length < 150){
@@ -25,17 +39,14 @@ function start(){
       })
       .done(resp => {
         $('#status-blogs-bar').html('One new blog').show().delay(2000).slideUp(2000);
-        var $ol = $('.stream-items');
         var blogToAdd = '<li class="stream-item"><div class="blog"><img src="http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-woman.png" alt="User image goes here."><div class="content"><strong class="fullname">' + resp.blog.fullName + '</strong><span>&rlm;</span><span>@</span><b>' + resp.blog.screenName + '</b>&nbsp;&middot;&nbsp;<small class="time timeago">' + $.timeago(resp.blog.createdAt) + '</small><p>' + resp.blog.blogText + '<button class="deleteButton" data-id="' + resp.blog._id + '"> Delete </button></p></div></div></li>';
-        $ol.prepend(blogToAdd);
+        $('.stream-items').prepend(blogToAdd);
 
         // Reset the form
         $('#fullName').val('');
         $('#screenName').val('');
         $('textarea').val('');
         $('.blog-counter').html(140 - $('textarea').val().length);
-      })
-      .fail(data => {
       });
     } else {
       if (text.length === 0) {
@@ -52,10 +63,8 @@ function start(){
       url: `http://localhost:3000/blogs/${$(this).data('id')}`,
       type: 'delete'
     }).done(() => {
-      location.reload();
-      setTimeout(function(){
-        $('#status-blogs-bar').html('Blog successfully deleted').show().delay(2000).slideUp(2000);
-      }, 1000);
+      blogsIndex();
+      $('#status-blogs-bar').html('Blog successfully deleted').show().delay(2000).slideUp(2000);
     });
   }
 

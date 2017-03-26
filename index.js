@@ -1,5 +1,5 @@
 const bodyParser      = require('body-parser');
-const ejsLayouts      = require('express-ejs-layouts');
+const cors            = require('cors');
 const express         = require('express');
 const methodOverride  = require('method-override');
 const mongoose        = require('mongoose');
@@ -14,12 +14,11 @@ mongoose.connect(databaseURL, () => {
   return console.log(`App is connected to the ${databaseURL} database`);
 });
 
-app.set('view engine', 'ejs');
-app.set('views', `${__dirname}/views`);
-
-app.use(morgan('dev'));
-app.use(express.static(`${__dirname}/public`));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true} ));
+app.use(cors());
+app.use(express.static(`${__dirname}/public`));
+app.use(morgan('dev'));
 app.use(methodOverride(req => {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     const method = req.body._method;
@@ -27,7 +26,6 @@ app.use(methodOverride(req => {
     return method;
   }
 }));
-app.use(ejsLayouts);
 
 app.use('/', router);
 
