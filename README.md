@@ -5,11 +5,11 @@ The objective of this code test is to build a basic blogging service. A user sho
 
 
 ## How it works
-Run ```npm i```
-Run ```node app/db/seed```
-Ensure ```mongod``` and ```nodemon``` are running
-The app runs in the browser on localhost:3000
+1) Run ```npm i```
+2) Run ```node app/db/seed```
+3) Ensure ```mongod``` and ```nodemon``` are running
+4) The app runs in the browser on localhost:3000
 
 ## How to run the tests
-Run ```npm test```
-Run ```npm run test-e2e```
+* For unit tests, run ```npm test```
+* For browser tests, run ```npm run test-e2e```
